@@ -6,7 +6,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.eunice.postsassignment.databinding.PostslistBinding
 import com.squareup.picasso.Picasso
 
-class ProductAdapter (var postslist:List<Posts>): RecyclerView.Adapter<PostsViewHolder>() {
+class PostsAdapter (var postslist:List<Posts>): RecyclerView.Adapter<PostsViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostsViewHolder {
         val binding=PostslistBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return  PostsViewHolder(binding)
