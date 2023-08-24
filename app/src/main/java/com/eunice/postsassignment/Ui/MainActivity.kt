@@ -23,9 +23,9 @@ class MainActivity : AppCompatActivity() {
         super.onResume()
         postsViewModel.fetchPosts()
         postsViewModel.postsLiveData.observe(this, Observer { postslist ->
-            var productAdapter = PostsAdapter(postslist ?: emptyList())
+            var postsAdapter = PostsAdapter(postslist ?: emptyList())
             binding.rvRecycler.layoutManager = LinearLayoutManager(this@MainActivity)
-            binding.rvRecycler.adapter = productAdapter
+            binding.rvRecycler.adapter = postsAdapter
 
             Toast.makeText(
                 baseContext,
