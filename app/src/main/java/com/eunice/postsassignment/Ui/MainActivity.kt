@@ -1,4 +1,4 @@
-package Ui
+package com.eunice.postsassignment.Ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -20,14 +20,15 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        getItems()
+
+
     }
      override fun onResume() {
         super.onResume()
-
+        getPosts()
     }
 
-    private fun getItems() {
+    private fun getPosts() {
         val retrofit = ApiClient.buildClient(ApiInterface::class.java)
         val request = retrofit.getPosts()
 
