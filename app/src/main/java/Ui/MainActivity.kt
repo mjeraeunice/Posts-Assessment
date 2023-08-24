@@ -1,4 +1,4 @@
-package ui
+package Ui
 
 import ViewModels.PostsViewModel
 import androidx.appcompat.app.AppCompatActivity
